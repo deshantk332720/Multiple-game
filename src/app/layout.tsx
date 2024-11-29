@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,8 +29,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         <div className="bg-black text-2xl text-white ">
+         <Link href="/">Home</Link>
+         </div>
         {children}
+        
+        <footer className=" text-white text-center py-4">
+        <p>&copy; 2024 GameHub | All Rights Reserved</p>
+      </footer>
       </body>
+     
     </html>
   );
 }
+    
